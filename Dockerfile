@@ -1,4 +1,4 @@
-FROM swissgrc/azure-pipelines-dotnet:6.0.301
+FROM swissgrc/azure-pipelines-dotnet:6.0.302
 
 LABEL org.opencontainers.image.vendor="Swiss GRC AG"
 LABEL org.opencontainers.image.authors="Swiss GRC AG <opensource@swissgrc.com>"
@@ -10,8 +10,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install Azure CLI
 
-# renovate: datasource=github-releases depName=Azure/azure-cli extractVersion=^Azure CLI (?<version>.*)$
-ENV AZURECLI_VERSION=2.37.0
+# renovate: datasource=github-tags depName=Azure/azure-cli extractVersion=^azure-cli-(?<version>.*)$
+ENV AZURECLI_VERSION=2.38.0
 
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
   AZ_REPO=$(lsb_release -cs) && \
