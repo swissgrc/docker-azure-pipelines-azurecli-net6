@@ -1,4 +1,4 @@
-FROM swissgrc/azure-pipelines-dotnet:6.0.402
+FROM swissgrc/azure-pipelines-dotnet:6.0.403
 
 LABEL org.opencontainers.image.vendor="Swiss GRC AG"
 LABEL org.opencontainers.image.authors="Swiss GRC AG <opensource@swissgrc.com>"
