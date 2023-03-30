@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM swissgrc/azure-pipelines-dotnet:6.0.407 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-dotnet:6.0.407 AS base
 
 
 # Builder image
