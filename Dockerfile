@@ -42,7 +42,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install Azure CLI
 
 # renovate: datasource=github-tags depName=Azure/azure-cli extractVersion=^azure-cli-(?<version>.*)$
-ENV AZURECLI_VERSION=2.48.1
+ENV AZURECLI_VERSION=2.49.0
 
 RUN apt-get update -y && \
   # Install Azure CLI
