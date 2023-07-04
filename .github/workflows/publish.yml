@@ -14,6 +14,11 @@ jobs:
     uses: swissgrc/.github/.github/workflows/publish-image.yml@main
     with:
       image-name: swissgrc/azure-pipelines-azurecli
+      default-latest-tag: false
+      additional-latest-tag-name: latest-net6
+      default-unstable-tag: false
+      additional-unstable-tag-name: unstable-net6
+      release-tag-suffix: net6
     secrets:
       gh-token: ${{ secrets.GITHUB_TOKEN }}
       docker-username: ${{ secrets.DOCKER_USERNAME }}
