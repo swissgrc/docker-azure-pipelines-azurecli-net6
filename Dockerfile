@@ -8,12 +8,12 @@ FROM base AS build
 # Make sure to fail due to an error at any stage in shell pipes
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# renovate: datasource=repology depName=debian_11/curl versioning=deb
-ENV CURL_VERSION=7.74.0-1.3+deb11u10
-# renovate: datasource=repology depName=debian_11/lsb-release versioning=deb
-ENV LSBRELEASE_VERSION=11.1.0
-# renovate: datasource=repology depName=debian_11/gnupg2 versioning=deb
-ENV GNUPG_VERSION=2.2.27-2+deb11u2
+# renovate: datasource=repology depName=debian_12/curl versioning=deb
+ENV CURL_VERSION=7.88.1-10+deb12u4
+# renovate: datasource=repology depName=debian_12/lsb-release versioning=deb
+ENV LSBRELEASE_VERSION=12.0-1
+# renovate: datasource=repology depName=debian_12/gnupg2 versioning=deb
+ENV GNUPG_VERSION=2.2.40-1.1
 
 RUN apt-get update -y && \
   # Install necessary dependencies
@@ -46,7 +46,7 @@ ENV AZURECLI_VERSION=2.54.0
 
 RUN apt-get update -y && \
   # Install Azure CLI
-  apt-get install -y --no-install-recommends azure-cli=${AZURECLI_VERSION}-1~bullseye && \
+  apt-get install -y --no-install-recommends azure-cli=${AZURECLI_VERSION}-1~bookworm && \
   # Clean up
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
