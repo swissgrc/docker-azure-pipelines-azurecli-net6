@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-dotnet:6.0.420 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-dotnet:6.0.421 AS base
 
 
 # Builder image
@@ -42,7 +42,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install Azure CLI
 
 # renovate: datasource=github-tags depName=Azure/azure-cli extractVersion=^azure-cli-(?<version>.*)$
-ENV AZURECLI_VERSION=2.58.0
+ENV AZURECLI_VERSION=2.59.0
 
 RUN apt-get update -y && \
   # Install Azure CLI
