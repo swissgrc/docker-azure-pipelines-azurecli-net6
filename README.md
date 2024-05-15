@@ -34,7 +34,7 @@ The following example shows the container used for a deployment step with a Azur
 
 | Tag           | Description                                                                                               | Base Image                                | Azure CLI | Size                                                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------|
-| latest-net6   | Latest stable release (from `main` branch)                                                                | swissgrc/azure-pipelines-dotnet:6.0.421   | 2.59.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/latest-net6?style=flat-square)   |
+| latest-net6   | Latest stable release (from `main` branch)                                                                | swissgrc/azure-pipelines-dotnet:6.0.422   | 2.60.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/latest-net6?style=flat-square)   |
 | unstable-net6 | Latest unstable release (from `develop` branch)                                                           | swissgrc/azure-pipelines-dotnet:6.0.422   | 2.60.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/unstable-net6?style=flat-square) |
 | 2.37.0        | [Azure CLI 2.37.0](https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli#may-24-2022)        | swissgrc/azure-pipelines-dotnet:6.0.301   | 2.37.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.37.0?style=flat-square)        |
 | 2.38.0        | [Azure CLI 2.38.0](https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli#july-05-2022)       | swissgrc/azure-pipelines-dotnet:6.0.302   | 2.38.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.38.0?style=flat-square)        |
@@ -62,6 +62,7 @@ The following example shows the container used for a deployment step with a Azur
 | 2.57.0-net6   | [Azure CLI 2.57.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#february-06-2024)  | swissgrc/azure-pipelines-dotnet:6.0.419   | 2.57.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.57.0-net6?style=flat-square)   |
 | 2.58.0-net6   | [Azure CLI 2.58.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#march-05-2024)     | swissgrc/azure-pipelines-dotnet:6.0.420   | 2.58.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.58.0-net6?style=flat-square)   |
 | 2.59.0-net6   | [Azure CLI 2.59.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#april-02-2024)     | swissgrc/azure-pipelines-dotnet:6.0.421   | 2.59.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.59.0-net6?style=flat-square)   |
+| 2.60.0-net6   | [Azure CLI 2.60.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#april-30-2024)     | swissgrc/azure-pipelines-dotnet:6.0.422   | 2.60.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.60.0-net6?style=flat-square)   |
 
 ### Configuration
 
@@ -69,6 +70,6 @@ These environment variables are supported:
 
 | Environment variable   | Default value        | Description                                                      |
 |------------------------|----------------------|------------------------------------------------------------------|
-| AZURECLI_VERSION       | `2.54.0`             | Version of Azure CLI installed in the image.                     |
+| AZURECLI_VERSION       | `2.60.0`             | Version of Azure CLI installed in the image.                     |
 
 [Azure Pipelines container jobs]: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
