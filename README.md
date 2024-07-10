@@ -64,6 +64,7 @@ The following example shows the container used for a deployment step with a Azur
 | 2.59.0-net6   | [Azure CLI 2.59.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#april-02-2024)     | swissgrc/azure-pipelines-dotnet:6.0.421   | 2.59.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.59.0-net6?style=flat-square)   |
 | 2.60.0-net6   | [Azure CLI 2.60.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#april-30-2024)     | swissgrc/azure-pipelines-dotnet:6.0.422   | 2.60.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.60.0-net6?style=flat-square)   |
 | 2.61.0-net6   | [Azure CLI 2.61.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#may-21-2024)       | swissgrc/azure-pipelines-dotnet:6.0.423   | 2.61.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.61.0-net6?style=flat-square)   |
+| 2.62.0-net6   | [Azure CLI 2.62.0](https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli#july-09-2024)      | swissgrc/azure-pipelines-dotnet:6.0.424   | 2.62.0    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-azurecli/2.62.0-net6?style=flat-square)   |
 
 ### Configuration
 
