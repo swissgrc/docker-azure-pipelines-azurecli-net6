@@ -17,7 +17,7 @@ ENV GNUPG_VERSION=2.2.40-1.1
 
 RUN apt-get update -y && \
   # Install necessary dependencies
-  apt-get install -y --no-install-recommends curl=${CURL_VERSION} lsb-release=${LSBRELEASE_VERSION} gnupg=${GNUPG_VERSION} && \
+  apt-get install -y --no-install-recommends curl=${CURL_VERSION} gnupg=${GNUPG_VERSION} lsb-release=${LSBRELEASE_VERSION} && \
   # Add Azure CLI public key
   curl --proto "=https" -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
   AZ_REPO=$(lsb_release -cs) && \
