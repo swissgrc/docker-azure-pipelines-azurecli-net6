@@ -9,7 +9,7 @@ FROM base AS build
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # renovate: datasource=repology depName=debian_12/curl versioning=deb
-ENV CURL_VERSION=7.88.1-10+deb12u6
+ENV CURL_VERSION=7.88.1-10+deb12u7
 # renovate: datasource=repology depName=debian_12/lsb-release versioning=deb
 ENV LSBRELEASE_VERSION=12.0-1
 # renovate: datasource=repology depName=debian_12/gnupg2 versioning=deb
@@ -17,9 +17,14 @@ ENV GNUPG_VERSION=2.2.40-1.1
 
 RUN apt-get update -y && \
   # Install necessary dependencies
-  apt-get install -y --no-install-recommends curl=${CURL_VERSION} gnupg=${GNUPG_VERSION} lsb-release=${LSBRELEASE_VERSION} && \
+  apt-get install -y --no-install-recommends \
+    curl=${CURL_VERSION} \
+    gnupg=${GNUPG_VERSION} \
+    lsb-release=${LSBRELEASE_VERSION} && \
   # Add Azure CLI public key
-  curl --proto "=https" -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
+  curl --proto "=https" -sL https://packages.microsoft.com/keys/microsoft.asc \
+    | gpg --dearmor \
+    > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
   AZ_REPO=$(lsb_release -cs) && \
   echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" > /etc/apt/sources.list.d/azure-cli.list
 
@@ -42,7 +47,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install Azure CLI
 
 # renovate: datasource=github-tags depName=Azure/azure-cli extractVersion=^azure-cli-(?<version>.*)$
-ENV AZURECLI_VERSION=2.63.0
+ENV AZURECLI_VERSION=2.64.0
 
 RUN apt-get update -y && \
   # Install Azure CLI
